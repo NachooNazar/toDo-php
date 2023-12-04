@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('color');
             $table->timestamps();
         });
+
+            Schema::table('todos', function (Blueprint $table){
+                $table->foreignId('state_id')->references('id')->on('states');
+            });
     }
 
     /**

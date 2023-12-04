@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->unsignedBigInteger('state_id');
+            // $table->unsignedBigInteger('state_id');
 
-            $table->foreign('state_id')->references('id')->on('states');
+            // $table->foreign('state_id')->references('id')->on('states');
             $table->timestamps();
         });
     }
